@@ -1,15 +1,15 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Windows-CRD
+name: Lawis-Windows 
 
 on: 
   workflow_dispatch:
     inputs:
       authcode:
-        description: 'Enter CRD code'
+        description: 'CDR BAŞLATMA KODU'
         required: true
       pincode:
-        description: 'Six digit Pin'
+        description: '6 HANELİ ŞİFRE'
         required: true
   
 jobs:
