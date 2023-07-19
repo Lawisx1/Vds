@@ -36,4 +36,4 @@ Eğer bu projeye katkıda bulunmak isterseniz, lütfen bir "Pull Request" gönde
 
 ## DETAYLI ANLATIM VİDEOSU 
 ----
-[![FREE VDS ANLATIM](https://youtu.be/lVGNFTCS7Wg)](https://youtu.be/lVGNFTCS7Wg)
+https://media.discordapp.net/attachments/981482432354189325/1131288913823150110/47ef496e-905d-4c45-ba89-44533885dcd5_1.mp4
