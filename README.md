@@ -30,10 +30,6 @@ Süreli VDS Projesi, açık kaynak kodlu bir Python uygulamasıdır. Projeyi yer
 
 Eğer bu projeye katkıda bulunmak isterseniz, lütfen bir "Pull Request" gönderin. Yeni özellikler eklemek, hataları düzeltmek veya belgelendirmeye katkı sağlamak her zaman hoşgeldir.
 
-## Lisans
-
-Bu proje MIT Lisansı altında dağıtılmaktadır. Daha fazla bilgi için [LİSANS dosyasını](LICENSE) inceleyebilirsiniz.
-
 ---
 
 **Not:** Bu projenin temel amacı öğrenmek ve eğlenmektir. Gerçek kullanımlarda güvenlik ve performans gibi önemli konulara dikkat etmek gerekebilir. Ayrıca, ücretsiz sunucu kaynakları sınırlıdır ve yüksek taleplerde performans düşebilir.
