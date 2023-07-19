@@ -2,7 +2,7 @@
 
 Bu proje, kısa süreli sanal özel sunucular (VDS - Virtual Dedicated Server) sağlayarak kullanıcıların işlerini kolayca halledebilmelerini amaçlamaktadır. Ücretsiz ve hızlıca kullanılabilir VDS sunucusu elde etmek isteyenler için ideal bir çözümdür.
 
-![Süreli VDS]([https://images.app.goo.gl/gX1BLAUMxUqin3mP6])
+![Süreli VDS]( [https://images.app.goo.gl/gX1BLAUMxUqin3mP6] )
 
 ## Nasıl Çalışır?
 
@@ -17,7 +17,7 @@ Süreli VDS Projesi, açık kaynak kodlu bir Python uygulamasıdır. Projeyi yer
 3. Uygulamayı başlatın:
 
 
-4. Tarayıcınızda şuna gidin 'https://remotedesktop.google.com/headless` ve UZAKTAN MASA ÜSTÜ talebinizi oluşturun.
+4. Tarayıcınızda şuna gidin ' https://remotedesktop.google.com/headless ` ve UZAKTAN MASA ÜSTÜ talebinizi oluşturun.
 
 ## Özellikler
 
