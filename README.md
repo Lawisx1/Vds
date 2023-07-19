@@ -17,7 +17,7 @@ Süreli VDS Projesi, açık kaynak kodlu bir Python uygulamasıdır. Projeyi yer
 3. Uygulamayı başlatın:
 
 
-4. Tarayıcınızda şu adrese gidin: `http://localhost:5000` ve VDS talebinizi oluşturun.
+4. Tarayıcınızda şuna gidin 'https://remotedesktop.google.com/access` ve UZAKTAN MASA ÜSTÜ talebinizi oluşturun.
 
 ## Özellikler
 
