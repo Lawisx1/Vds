@@ -35,3 +35,5 @@ Eğer bu projeye katkıda bulunmak isterseniz, lütfen bir "Pull Request" gönde
 **Not:** Bu projenin temel amacı öğrenmek ve eğlenmektir. Gerçek kullanımlarda güvenlik ve performans gibi önemli konulara dikkat etmek gerekebilir. Ayrıca, ücretsiz sunucu kaynakları sınırlıdır ve yüksek taleplerde performans düşebilir.
 
 ## DETAYLI ANLATIM VİDEOSU 
+----
+[![FREE VDS ANLATIM](https://youtu.be/lVGNFTCS7Wg)](https://youtu.be/lVGNFTCS7Wg)
