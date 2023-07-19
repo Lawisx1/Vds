@@ -2,7 +2,6 @@
 
 Bu proje, kısa süreli sanal özel sunucular (VDS - Virtual Dedicated Server) sağlayarak kullanıcıların işlerini kolayca halledebilmelerini amaçlamaktadır. Ücretsiz ve hızlıca kullanılabilir VDS sunucusu elde etmek isteyenler için ideal bir çözümdür.
 
- https://images.app.goo.gl/gX1BLAUMxUqin3mP6
 
 ## Nasıl Çalışır?
 
