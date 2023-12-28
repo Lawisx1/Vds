@@ -1,8 +1,6 @@
-# This is a basic workflow to help you get started with Actions
+name: Lawis-Windows
 
-name: Lawis-Windows 
-
-on: 
+on:
   workflow_dispatch:
     inputs:
       authcode:
@@ -11,7 +9,7 @@ on:
       pincode:
         description: '6 HANELİ ŞİFRE'
         required: true
-  
+
 jobs:
   build:
     runs-on: windows-latest
@@ -25,7 +23,6 @@ jobs:
     - name: Keep Alive
       run: ./timeout.ps1
 
-# Display Actions URL
   display-actions-url:
     runs-on: ubuntu-latest
     needs: build
