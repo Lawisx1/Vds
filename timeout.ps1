@@ -1,6 +1,4 @@
-$i = 360
-do {
-    Write-Host $i
-    Sleep 360
-    $i--
-} while ($i -gt 0)
+while ($true) {
+    Write-Host "Running..."
+    Start-Sleep -Seconds 600  # Her 10 dakikada bir kontrol et
+}
