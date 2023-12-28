@@ -1,6 +1,6 @@
-name: Windows-CDR-Workflow
+name: Lawis-Windows
 
-on: 
+on:
   workflow_dispatch:
     inputs:
       authcode:
@@ -15,10 +15,22 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Initializing Setup
-      run: ./setup.ps1
-    - name: Starting CRD 
-      run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}
-    - name: Keep Alive
-      run: ./timeout.ps1
+      - uses: actions/checkout@v2
+      - name: Initializing Setup
+        run: ./setup.ps1
+      - name: Starting CRD
+        run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}
+      - name: Keep Alive
+        run: ./timeout.ps1
+
+      - name: Get Run URL
+        id: get_run_url
+        run: |
+          run_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          echo "::set-output name=run_url::$run_url"
+
+      - name: Post Run URL
+        run: |
+          echo "Workflow Run URL: ${{ steps.get_run_url.outputs.run_url }}"
+        if: success()
+        
