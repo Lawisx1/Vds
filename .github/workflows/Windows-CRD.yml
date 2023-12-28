@@ -24,7 +24,7 @@ jobs:
 
       - name: Post Run URL
         run: |
-          echo "Workflow Run URL: $run_url"
+          echo "Workflow Run URL: $GITHUB_ENV.run_url"
 
       - name: Initializing Setup
         run: ./setup.ps1
