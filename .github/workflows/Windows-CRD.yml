@@ -24,12 +24,3 @@ jobs:
       run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}
     - name: Keep Alive
       run: ./timeout.ps1
-
-# Add the following section to display Actions URL
-  display-actions-url:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - name: Display Actions URL
-      run: echo "Actions URL: ${{ github.event.repository.html_url }}/actions/runs/${{ github.run_id }}"
-      
