@@ -1,9 +1,21 @@
 while ($true) {
     try {
-        Write-Host "Running..."
-        Start-Sleep -Seconds 600  # Her 10 dakikada bir kontrol et
+        # Çalıştığını logla
+        $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+        Write-Host "$timestamp: Running..."
+
+        # Burada sürekli çalışmasını istediğiniz işlemleri ekleyin
+        # Örneğin, bir API'ye istek göndermek, bir veritabanını kontrol etmek vb.
+
+        # Belirli bir süre beklet
+        Start-Sleep -Seconds 600
     }
     catch {
-        Write-Host "An error occurred: $_"
+        # Hata oluşursa, hata bilgisini logla
+        $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+        Write-Host "$timestamp: An error occurred: $_"
+
+        # Hata sonrası bekleme süresi (opsiyonel)
+        Start-Sleep -Seconds 60
     }
 }
