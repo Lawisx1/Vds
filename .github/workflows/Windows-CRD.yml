@@ -1,31 +1,18 @@
-name: Lawis-Windows
-
-on:
-  workflow_dispatch:
-    inputs:
-      authcode:
-        description: 'CDR BAŞLATMA KODU'
-        required: true
-      pincode:
-        description: '6 HANELİ ŞİFRE'
-        required: true
-
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v2
-      - name: Get Run URL
-        id: get_run_url
+
+      - name: Set Run URL
+        id: set_run_url
         run: |
-          run_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
-          echo "::set-output name=run_url::$run_url"
+          echo "run_url=https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" >> $GITHUB_ENV
 
       - name: Post Run URL
         run: |
-          echo "Workflow Run URL: ${{ steps.get_run_url.outputs.run_url }}"
-        if: success()
+          echo "Workflow Run URL: $run_url"
 
       - name: Initializing Setup
         run: ./setup.ps1
