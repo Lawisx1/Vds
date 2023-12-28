@@ -1,6 +1,8 @@
-name: Lawis-Windows
+# This is a basic workflow to help you get started with Actions
 
-on:
+name: Lawis-Windows 
+
+on: 
   workflow_dispatch:
     inputs:
       authcode:
@@ -9,27 +11,17 @@ on:
       pincode:
         description: '6 HANELİ ŞİFRE'
         required: true
-
+  
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Set Run URL
-        id: set_run_url
-        run: |
-          echo "run_url=https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" >> $GITHUB_ENV
-
-      - name: Post Run URL
-        run: |
-          echo "Workflow Run URL: $env:run_url"
-
-      - name: Initializing Setup
-        run: ./setup.ps1
-      - name: Starting CRD
-        run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}
-      - name: Keep Alive
-        run: ./timeout.ps1
-        
+    - uses: actions/checkout@v2
+    - name: Initializing Setup
+      run: ./setup.ps1
+    - name: Starting CRD 
+      run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}
+    - name: Keep Alive
+      run: ./timeout.ps1
+      
