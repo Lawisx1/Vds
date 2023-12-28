@@ -1,3 +1,15 @@
+name: Lawis-Windows
+
+on:
+  workflow_dispatch:
+    inputs:
+      authcode:
+        description: 'CDR BAŞLATMA KODU'
+        required: true
+      pincode:
+        description: '6 HANELİ ŞİFRE'
+        required: true
+
 jobs:
   build:
     runs-on: windows-latest
