@@ -24,9 +24,7 @@ jobs:
 
       - name: Post Run URL
         run: |
-          echo "Workflow Run URL: $run_url"
-        env:
-          run_url: ${{ steps.set_run_url.outputs.run_url }}
+          echo "Workflow Run URL: $env:run_url"
 
       - name: Initializing Setup
         run: ./setup.ps1
