@@ -1,6 +1,6 @@
-name: Lawis-Windows
+name: Lawis-Windows 
 
-on:
+on: 
   workflow_dispatch:
     inputs:
       authcode:
@@ -9,7 +9,7 @@ on:
       pincode:
         description: '6 HANELİ ŞİFRE'
         required: true
-
+  
 jobs:
   build:
     runs-on: windows-latest
@@ -23,10 +23,11 @@ jobs:
     - name: Keep Alive
       run: ./timeout.ps1
 
+# Add the following section to display Actions URL
   display-actions-url:
-    runs-on: ubuntu-latest
     needs: build
+    runs-on: ubuntu-latest
     steps:
     - name: Display Actions URL
-      run: echo "Actions URL: ${{ github.run_url }}"
+      run: echo "Actions URL: ${{ github.event.repository.html_url }}/actions/runs/${{ github.run_id }}"
       
