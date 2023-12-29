@@ -1,9 +1,7 @@
-#!/bin/bash
+$i = 360
 
-i=360
-
-while [ $i -gt 0 ]; do
-    echo $i
-    sleep 360
-    ((i--))
-done
+while ($i -gt 0) {
+    Write-Host $i
+    Start-Sleep -Seconds 360
+    $i--
+}
