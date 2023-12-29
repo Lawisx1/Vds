@@ -1,21 +1,13 @@
-while ($true) {
-    try {
-        # Çalıştığını logla
-        $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-        Write-Host "$timestamp: Running..."
+#! /bin/bash
 
-        # Burada sürekli çalışmasını istediğiniz işlemleri ekleyin
-        # Örneğin, bir API'ye istek göndermek, bir veritabanını kontrol etmek vb.
+case "$(pidof myprocess | wc -w)" in
 
-        # Belirli bir süre beklet
-        Start-Sleep -Seconds 600
-    }
-    catch {
-        # Hata oluşursa, hata bilgisini logla
-        $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-        Write-Host "$timestamp: An error occurred: $_"
-
-        # Hata sonrası bekleme süresi (opsiyonel)
-        Start-Sleep -Seconds 60
-    }
-}
+0)  echo "Restarting My Process:     $(date)" >> /var/log/myprocess.txt
+    /home/pi/myprocess -and -some -args &
+    ;;
+1)  # all ok
+    ;;
+*)  echo "Removed double My Process: $(date)" >> /var/log/myprocess.txt
+    kill $(pidof myprocess | awk '{print $1}')
+    ;;
+esac
